@@ -3,7 +3,13 @@ import injectSheet from 'react-jss'
 
 import { ReactComponent as Logo }  from './brand-logo.svg';
 
-const stylesheet = { BrandLogo: {}};
+const stylesheet = {
+    BrandLogo: {
+        '& svg': {
+            cursor: 'pointer',
+        }
+    }
+};
 
 const BrandLogo = ({ classes }) => 
     <div className={classes.BrandLogo}>

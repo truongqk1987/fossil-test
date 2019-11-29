@@ -9,6 +9,7 @@ const stylesheet = {
         background: '#252524',
         color: 'white',
         padding: '1rem',
+        cursor: 'pointer',
     }
 }
 

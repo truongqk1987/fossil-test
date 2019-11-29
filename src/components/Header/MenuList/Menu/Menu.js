@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const stylesheet = {
     Menu: {
+        cursor: 'pointer',
         color: 'white',
         flexGrow: 1,
         display: 'flex',
