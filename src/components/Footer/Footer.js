@@ -8,14 +8,18 @@ const stylesheet = {
   Footer: {
     background: '#1e1e1e',
     fontFamily: "sans-serif",
+    '&>hr': {
+      background: '#C3C3C3',
+      margin: '0.5rem 0',
+    }
   }
 }
 
 const Footer = ({classes}) => 
-  <div className={classes.Footer}>
+  <footer className={classes.Footer}>
     <Contacts />
     <hr />
     <CompanyName />
-  </div>;
+  </footer>;
 
 export default injectSheet(stylesheet)(Footer);

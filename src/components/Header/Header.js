@@ -17,11 +17,11 @@ const stylesheet = {
 }
 
 const Header = ({ classes }) =>
-    <div className={classes.Header}>
+    <header className={classes.Header}>
         <BrandLogo></BrandLogo>
         <MenuList></MenuList>
         <UserInfo></UserInfo>
-    </div>
+    </header>
 
 
 export default injectSheet(stylesheet)(Header);
