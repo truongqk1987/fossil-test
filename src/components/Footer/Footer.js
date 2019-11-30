@@ -9,7 +9,7 @@ const stylesheet = {
     background: '#1e1e1e',
     fontFamily: "sans-serif",
     '&>hr': {
-      background: '#C3C3C3',
+      background: '#F2F2F2',
       margin: '0.5rem 0',
     }
   }

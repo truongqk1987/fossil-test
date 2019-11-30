@@ -7,6 +7,7 @@ import Orders from './Orders';
 const stylesheet = {
   ConfirmSection: {
     padding: '1rem',
+    flexGrow: '1',
   }
 }
 

@@ -9,10 +9,11 @@ const stylesheet = {
     padding: '1rem 0',
     display: 'flex',
     justifyContent: 'flex-end',
-    minWidth: '10rem',
+    minWidth: '15rem',
     '&>.menuList': {
       margin: 0,
-      minWidth: '80%',
+      minWidth: '100%',
+      padding: 0,
     }
   }
 }

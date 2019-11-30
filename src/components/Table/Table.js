@@ -1,5 +1,24 @@
 import React from 'react';
+import injectSheet from 'react-jss';
 
-const Table = ({headers, datas}) => <>I am table</>;
+import TableHeader from './TableHeader';
+import TableData from './TableData';
 
-export default Table;
+const stylesheet = {
+  Table: {
+    borderCollapse: 'collapse',
+    width: '100%',
+  }
+}
+
+const Table = ({classes, header, datas, customizeRenders, idField}) => {
+  const dataKeys = Object.keys(header);
+  const labels = Object.values(header);
+  return <table className={classes.Table}>
+          <TableHeader labels={labels}></TableHeader>
+          <TableData idField={idField} customizeRenders={customizeRenders}
+            datas={datas} dataKeys={dataKeys}></TableData>
+        </table>
+}
+
+export default injectSheet(stylesheet)(Table);
