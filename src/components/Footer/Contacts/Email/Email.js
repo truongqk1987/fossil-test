@@ -13,7 +13,7 @@ const stylesheet = {
 
 const Email = ({classes}) => 
   <div className={classes.Email}>
-    <i class="fa fa-envelope-o"></i>
+    <i className="fa fa-envelope-o"></i>
     <span>phuong@fossil.com</span>
   </div>;
 

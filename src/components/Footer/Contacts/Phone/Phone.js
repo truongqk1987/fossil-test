@@ -13,7 +13,7 @@ const stylesheet = {
 
 const Phone = ({classes}) => 
   <div className={classes.Phone}>
-    <i class="fa fa-phone"></i>
+    <i className="fa fa-phone"></i>
     <span>028 3826 8160</span>
   </div>;
 

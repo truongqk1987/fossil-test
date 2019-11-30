@@ -12,6 +12,7 @@ const stylesheet = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: '1rem 0 0.5rem 0',
   }
 }
 

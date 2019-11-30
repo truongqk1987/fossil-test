@@ -13,7 +13,7 @@ const stylesheet = {
 
 const Address = ({classes}) => 
   <div className={classes.Address}>
-    <i class="fa fa-map-marker"></i>
+    <i className="fa fa-map-marker"></i>
     <span>384 Hoàng Diệu, Phường 6, Quận 4, Hồ Chí Minh</span>
   </div>;
 
