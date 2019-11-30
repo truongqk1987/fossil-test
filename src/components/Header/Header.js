@@ -1,6 +1,8 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
+import FluidContainer from 'components/FluidContainer';
+
 import BrandLogo from './BrandLogo';
 import MenuList from './MenuList';
 import UserInfo from './UserInfo';
@@ -18,10 +20,13 @@ const stylesheet = {
 
 const Header = ({ classes }) =>
     <header className={classes.Header}>
-        <BrandLogo></BrandLogo>
-        <MenuList></MenuList>
-        <UserInfo></UserInfo>
+        <FluidContainer>
+            <BrandLogo></BrandLogo>
+            <MenuList></MenuList>
+            <UserInfo></UserInfo>
+        </FluidContainer>
     </header>
+
 
 
 export default injectSheet(stylesheet)(Header);

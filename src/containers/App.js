@@ -12,7 +12,7 @@ import Footer from 'components/Footer';
 import Order from 'pages/Order';
 
 const stylsheet = {
-  App: {}
+  App: { display: 'flex', flexDirection: 'column'}
 }
 
 const App = () => <>

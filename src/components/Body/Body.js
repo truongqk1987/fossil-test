@@ -6,6 +6,7 @@ import BackSection from './BackSection';
 
 const styleSheet = {
   Body: {
+    flexGrow: 1,
     '&>hr': { margin: 0 },
   }
 };

@@ -6,14 +6,13 @@ import Status from './Status';
 const stylesheet = {
   StatusSidebar: {
     background: '#F2F2F2',
-    padding: '1rem 0',
     display: 'flex',
     justifyContent: 'flex-end',
-    minWidth: '15rem',
+    minWidth: '20%',
     '&>.menuList': {
-      margin: 0,
-      minWidth: '100%',
+      minWidth: '50%',
       padding: 0,
+      margin: '1rem 0',
     }
   }
 }

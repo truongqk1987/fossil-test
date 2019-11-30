@@ -22,7 +22,7 @@ const Pagination = ({ classes }) =>
     <div className={classes.Pagination}>
         <a href="javascrip:void(0)">First</a>
         <a href="javascrip:void(0)">01</a>
-        <a class="active" href="javascrip:void(0)"><span>02</span></a>
+        <a className="active" href="javascrip:void(0)"><span>02</span></a>
         <a href="javascrip:void(0)">03</a>
         <a href="javascrip:void(0)">04</a>
         <a href="javascrip:void(0)">...</a>

@@ -12,6 +12,9 @@ import StatusSidebar from './StatusSidebar';
 const stylesheet = {
   Order: {
     display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    height: '100%',
   }
 }
 
@@ -22,7 +25,7 @@ const Order = ({classes}) =>
       <Route exact path="/order">
         <ConfirmSection/>
       </Route>
-    </Switch>
+    </Switch>  
   </div>;
 
 export default injectSheet(stylesheet)(Order);
