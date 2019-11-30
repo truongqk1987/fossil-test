@@ -1,13 +1,13 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-const stylesheet = {
+const stylesheet = theme => ({
   CompanyName: {
     textAlign: 'center',
-    color: 'white',
+    color: theme.footer.textColor,
     padding: '1rem 0',
   }
-}
+})
 
 const CompanyName = ({classes}) => 
   <div className={classes.CompanyName}>

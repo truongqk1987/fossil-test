@@ -1,23 +1,22 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
+import {flexCenter} from 'styles/layout'
+
 import Contacts from './Contacts';
 import CompanyName from './CompanyName';
 
 
-const stylesheet = {
+const stylesheet = theme => ({
   Footer: {
-    background: '#1e1e1e',
-    fontFamily: "sans-serif",
-    display: 'flex',
-    flexDirection: 'column',
+    background: theme.footer.background,
+    ...flexCenter('column'), 
     '&>hr': {
-      background: '#F2F2F2',
       margin: '0.5rem 0',
       width: '100%',
     }
   }
-}
+})
 
 const Footer = ({classes}) => 
   <footer className={classes.Footer}>

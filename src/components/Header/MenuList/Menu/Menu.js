@@ -1,22 +1,22 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import { NavLink } from 'react-router-dom';
+import { flexCenter, setFlexMaxSize, removeLinkStyle } from 'styles/layout';
 
-const stylesheet = {
+
+const stylesheet = theme => ({
     Menu: {
         cursor: 'pointer',
-        color: 'white',
-        flexGrow: 1,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        '&>a': { textDecoration: 'none', color: 'white'},
+        color: theme.header.textColor,
+        ...setFlexMaxSize(),
+        ...flexCenter(),
+        '&>a': { ...removeLinkStyle()},
         '& .active': {
             fontWeight: 'bold',
             textDecoration: 'underline',
         }
     }
-}
+})
 
 const Menu = ({ classes, active, url, label }) => 
     <li className={classes.Menu}>

@@ -6,7 +6,7 @@ import { ReactComponent as Logo }  from './brand-logo.svg';
 
 const stylesheet = {
     BrandLogo: {
-        '& svg': {
+        '&>a>svg': {
             cursor: 'pointer',
         }
     }
