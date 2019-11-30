@@ -38,6 +38,7 @@ export default {
             sidebarActiveItemTextColor: colors.white,
             sidebarActiveItemBackground: colors.black10,
             confirmSectionBorder: colors.white10,
+            customerLevelBackground: colors.white10,
         }
     }
 }
