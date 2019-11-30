@@ -15,6 +15,7 @@ const stylesheet = {
             padding: '1rem',
             textAlign: 'center',
             width: '100%',
+            color: 'black',
         },
         '& .active': {
             color: 'white',
