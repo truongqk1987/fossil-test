@@ -1,13 +1,14 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
+import { resetTableStyle } from 'styles/layout';
+
 import TableHeader from './TableHeader';
 import TableData from './TableData';
 
 const stylesheet = {
   Table: {
-    borderCollapse: 'collapse',
-    width: '100%',
+    ...resetTableStyle(),
   }
 }
 

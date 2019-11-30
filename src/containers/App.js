@@ -5,14 +5,16 @@ import {
   Route,
 } from "react-router-dom";
 
-import Header from '../components/Header';
+import Header from 'components/Header';
 import Body from 'components/Body';
 import Footer from 'components/Footer';
+
+import {flexCenter} from 'styles/layout';
 
 import Order from 'pages/Order';
 
 const stylsheet = {
-  App: { display: 'flex', flexDirection: 'column'}
+  App: { ...flexCenter('column') }
 }
 
 const App = () => <>

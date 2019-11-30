@@ -1,23 +1,24 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
+import {setFlex, setFlexMaxSize} from 'styles/layout';
+
 import Summary from './Summary';
 import Orders from './Orders';
 import Pagination from './Pagination';
 
-const stylesheet = {
+const stylesheet = theme => ({
   ConfirmSection: {
     padding: '1rem',
-    flexGrow: '1',
+    ...setFlexMaxSize(),
     '&>footer': {
-      display: 'flex',
-      justifyContent: 'space-between',
-      border: '1px solid #F2F2F2',
+      ...setFlex('row', 'center', 'space-between'),
+      border: `1px solid ${theme.pages.order.confirmSectionBorder}`,
       borderTop: 'none',
       padding: '1.5rem 1rem',
     }
   }
-}
+});
 
 const ConfirmSection = ({classes}) => 
   <div className={classes.ConfirmSection}>

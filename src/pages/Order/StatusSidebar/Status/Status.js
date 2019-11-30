@@ -2,27 +2,25 @@ import React from 'react';
 import injectSheet from 'react-jss';
 import { NavLink } from 'react-router-dom';
 
-const stylesheet = {
+import {flexCenter, removeLinkStyle} from 'styles/layout';
+
+const stylesheet = theme => ({
     Status: {
         cursor: 'pointer',
-        color: 'black',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textDecoration: 'none',
+        ...flexCenter(),
+        
         '&>a': {
-            textDecoration: 'none',
+            ...removeLinkStyle(theme.pages.order.sidebarItemTextColor),
             padding: '1rem',
             textAlign: 'center',
             width: '100%',
-            color: 'black',
         },
         '& .active': {
-            color: 'white',
-            background: 'black',
+            color: theme.pages.order.sidebarActiveItemTextColor,
+            background: theme.pages.order.sidebarActiveItemBackground,
         }
     }
-}
+})
 
 const Status = ({ classes, active, url, label }) => 
     <li className={classes.Status}>

@@ -2,49 +2,26 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 import Status from './Status';
+import fakeStatues from './fakeStatues';
 
-const stylesheet = {
+const stylesheet = theme => ({
   StatusSidebar: {
-    background: '#F2F2F2',
+    background: theme.pages.order.sidebarBackground,
     display: 'flex',
     justifyContent: 'flex-end',
-    minWidth: '20%',
+    minWidth: theme.pages.order.minWidthSidebar,
     '&>.menuList': {
-      minWidth: '50%',
+      minWidth: theme.pages.order.minWidthSidebarItem,
       padding: 0,
       margin: '1rem 0',
     }
   }
-}
-
-const statuses = [
-  {
-    id: 1,
-    label: 'CONFIRM',
-    url: '/order/',
-  }, {
-    id: 2,
-    label: 'PROCESS',
-    url: '/order/process',
-  }, {
-    id: 3,
-    label: 'WAITING',
-    url: '/order/waiting',
-  }, {
-    id: 4,
-    label: 'PAYMENT',
-    url: '/order/payment',
-  }, {
-    id: 5,
-    label: 'SUCCESS',
-    url: '/order/success',
-  }
-]
+})
 
 const StatusSidebar = ({classes}) =>
   <div className={classes.StatusSidebar}>
     <ul className="menuList">
-      { statuses.map(status => <Status key={status.id} {...status} />) }
+      { fakeStatues.map(status => <Status key={status.id} {...status} />) }
     </ul>
   </div>;
 

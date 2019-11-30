@@ -4,8 +4,8 @@ import injectSheet from 'react-jss';
 const stylesheet = {
     FluidContainer: {
         display: 'flex',
-        minWidth: '960px',
-        maxWidth: '1280px',
+        minWidth: '80rem',
+        maxWidth: '100rem',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: props => props.flexColumn ? 'column': 'row',

@@ -1,13 +1,13 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-const stylesheet = {
+const stylesheet = theme => ({
   TableHeader: {
-    background: 'black',
-    color: 'white',
+    background: theme.table.header.background,
+    color: theme.table.header.textColor,
     '&>th': { border: 'none', padding: '1rem'}
   }
-}
+})
 
 const TableHeader = ({classes, labels}) =>
   <thead>

@@ -31,3 +31,6 @@ export const contactStyle = () => ({
     },
     '&>span': { color: colors.white}
 })
+
+export const resetTableStyle = () => ({ borderCollapse: 'collapse',
+width: '100%'})

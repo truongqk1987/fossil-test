@@ -6,14 +6,14 @@ import {
   Route,
 } from "react-router-dom";
 
+import { setFlex } from 'styles/layout';
+
 import ConfirmSection from './ConfirmSection';
 import StatusSidebar from './StatusSidebar';
 
 const stylesheet = {
   Order: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
+    ...setFlex('row', 'stretch', 'flex-start'),
     height: '100%',
   }
 }

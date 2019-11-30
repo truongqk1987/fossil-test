@@ -18,5 +18,26 @@ export default {
     footer: {
         background: colors.black10,
         textColor: colors.white,
+    },
+    table: {
+        header: {
+            background: colors.black10,
+            textColor: colors.white,
+        },
+        row: {
+           border: colors.white10,
+           hoverBackground: colors.white10, 
+        }
+    },
+    pages: {
+        order: {
+            sidebarBackground: colors.white10,
+            minWidthSidebar: '20%',
+            minWidthSidebarItem: '50%',
+            sidebarItemTextColor: colors.black,
+            sidebarActiveItemTextColor: colors.white,
+            sidebarActiveItemBackground: colors.black10,
+            confirmSectionBorder: colors.white10,
+        }
     }
 }

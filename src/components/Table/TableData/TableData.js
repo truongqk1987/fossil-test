@@ -3,15 +3,15 @@ import injectSheet from 'react-jss';
 
 import Field from './Field';
 
-const stylesheet = {
+const stylesheet = theme => ({
   TableData: {
-    border: '1px solid #F2F2F2',
+    border: `1px solid ${theme.table.row.border}`,
     borderTop: 'none',
     '&:hover': {
-      background: '#F5F5F5',
+      background: theme.table.row.hoverBackground,
     }
   }
-}
+});
 
 const TableData = ({ idField, classes, datas, dataKeys, customizeRenders}) => 
 <tbody>
