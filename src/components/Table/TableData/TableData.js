@@ -7,6 +7,9 @@ const stylesheet = {
   TableData: {
     border: '1px solid #F2F2F2',
     borderTop: 'none',
+    '&:hover': {
+      background: '#F5F5F5',
+    }
   }
 }
 

@@ -7,6 +7,7 @@ const stylesheet = {
             textDecoration: 'none',
             padding: '0.5rem',
             color: 'black',
+            cursor: 'pointer',
         },
         '&>a.active>span': {
             borderRadius: '50%',
@@ -24,8 +25,8 @@ const Pagination = ({ classes }) =>
         <a class="active" href="javascrip:void(0)"><span>02</span></a>
         <a href="javascrip:void(0)">03</a>
         <a href="javascrip:void(0)">04</a>
-        <a href="javascrip:void(0)">05</a>
-        <a href="javascrip:void(0)">06</a>
+        <a href="javascrip:void(0)">...</a>
+        <a href="javascrip:void(0)">12</a>
         <a href="javascrip:void(0)">Last</a>
     </div>
 
