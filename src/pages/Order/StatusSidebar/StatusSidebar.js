@@ -1,10 +1,10 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-import MenuItem from './MenuItem';
+import Status from './Status';
 
 const stylesheet = {
-  Sidebar: {
+  StatusSidebar: {
     background: '#F2F2F2',
     padding: '1rem 0',
     display: 'flex',
@@ -17,36 +17,35 @@ const stylesheet = {
   }
 }
 
-const items = [
+const statuses = [
   {
     id: 1,
     label: 'CONFIRM',
-    url: '/confirm',
-    active: true,
+    url: '/order/',
   }, {
     id: 2,
     label: 'PROCESS',
-    url: '/process',
+    url: '/order/process',
   }, {
     id: 3,
     label: 'WAITING',
-    url: '/waiting',
+    url: '/order/waiting',
   }, {
     id: 4,
     label: 'PAYMENT',
-    url: '/payment',
+    url: '/order/payment',
   }, {
     id: 5,
     label: 'SUCCESS',
-    url: '/success',
+    url: '/order/success',
   }
 ]
 
-const Sidebar = ({classes}) =>
-  <div className={classes.Sidebar}>
+const StatusSidebar = ({classes}) =>
+  <div className={classes.StatusSidebar}>
     <ul className="menuList">
-      { items.map(item => <MenuItem key={item.id} {...item} />) }
+      { statuses.map(status => <Status key={status.id} {...status} />) }
     </ul>
   </div>;
 
-export default injectSheet(stylesheet)(Sidebar);
+export default injectSheet(stylesheet)(StatusSidebar);

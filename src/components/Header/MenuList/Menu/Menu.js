@@ -1,6 +1,6 @@
 import React from 'react';
 import injectSheet from 'react-jss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const stylesheet = {
     Menu: {
@@ -10,7 +10,8 @@ const stylesheet = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        '&.active': {
+        '&>a': { textDecoration: 'none', color: 'white'},
+        '& .active': {
             fontWeight: 'bold',
             textDecoration: 'underline',
         }
@@ -18,8 +19,8 @@ const stylesheet = {
 }
 
 const Menu = ({ classes, active, url, label }) => 
-    <li className={`${classes.Menu} ${active && 'active'} `}>
-        <Link to={url}></Link> {label}
+    <li className={classes.Menu}>
+        <NavLink to={url} activeClassName="active">{label}</NavLink> 
     </li>
 
 export default injectSheet(stylesheet)(Menu);

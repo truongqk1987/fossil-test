@@ -1,5 +1,6 @@
 import React from 'react';
 import injectSheet from 'react-jss'
+import { NavLink } from 'react-router-dom';
 
 import { ReactComponent as Logo }  from './brand-logo.svg';
 
@@ -13,7 +14,7 @@ const stylesheet = {
 
 const BrandLogo = ({ classes }) => 
     <div className={classes.BrandLogo}>
-        <Logo/>
+        <NavLink to="/"><Logo/></NavLink>
     </div>
 
 export default injectSheet(stylesheet)(BrandLogo);

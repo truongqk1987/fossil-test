@@ -3,29 +3,21 @@ import injectSheet from 'react-jss';
 
 import Title from './Title';
 import BackSection from './BackSection';
-import Sidebar from './Sidebar';
-import Content from './Content';
 
 const styleSheet = {
   Body: {
     '&>hr': { margin: 0 },
-    '&>div.mainPart': {
-      display: 'flex',
-    }
   }
 };
 
-const Body = ({classes}) =>
+const Body = ({classes, children}) =>
   <section className={classes.Body}>
     <Title />
     <hr />
     <BackSection />
     <hr />
-    <div className="mainPart">
-    <Sidebar />
       
-    <Content/>
-    </div>
+    {children}
   </section>;
 
 export default injectSheet(styleSheet)(Body);
