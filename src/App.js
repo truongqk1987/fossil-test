@@ -1,13 +1,18 @@
 import React from 'react';
+import injectSheet from 'react-jss';
 
 import Header from './components/Header';
-import Content from './components/Content';
+import Body from './components/Body';
 import Footer from './components/Footer';
+
+const stylsheet = {
+  App: {}
+}
 
 const App = () => <>
   <Header></Header>
-  <Content></Content>
+  <Body></Body>
   <Footer></Footer>
 </>
 
-export default App;
+export default injectSheet(stylsheet)(App);
