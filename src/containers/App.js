@@ -1,8 +1,10 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from 'react';
 import injectSheet from 'react-jss';
 import {
   Switch,
   Route,
+  withRouter,
 } from "react-router-dom";
 
 import Header from 'components/Header';
@@ -17,19 +19,25 @@ const stylsheet = {
   App: { ...flexCenter('column') }
 }
 
-const App = () => <>
-  <Header></Header>
-  <Body>
-    <Switch>
-      <Route path="/">
-        <Order />
-      </Route>
-      <Route path="/order">
-        <Order />
-      </Route>
-    </Switch>
-  </Body>
-  <Footer></Footer>
-</>
+const App = ({ history }) => {
+  useEffect(() => {
+    history.push('/order');
+  }, []);
 
-export default injectSheet(stylsheet)(App);
+  return <>
+    <Header></Header>
+    <Body>
+      <Switch>
+        <Route path="/">
+          <Order />
+        </Route>
+        <Route path="/order">
+          <Order />
+        </Route>
+      </Switch>
+    </Body>
+    <Footer></Footer>
+  </>
+}
+
+export default injectSheet(stylsheet)(withRouter(App));
