@@ -1,8 +1,10 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
+import { ORDER_STATUSES } from 'globalConstants';
+
 import Status from './Status';
-import fakeStatues from './fakeStatues';
+
 
 const calcMaxWidthOfSidebar = ({ maxWidthSidebarItem}, {containerMaxWidth}) => 
   `calc(((100% - ${containerMaxWidth})/2) + ${maxWidthSidebarItem})`
@@ -26,7 +28,7 @@ const stylesheet = theme => ({
 const StatusSidebar = ({classes}) =>
   <div className={classes.StatusSidebar}>
     <ul className="menuList">
-      { fakeStatues.map(status => <Status key={status.id} {...status} />) }
+      { ORDER_STATUSES.map(status => <Status key={status.id} {...status} />) }
     </ul>
   </div>;
 

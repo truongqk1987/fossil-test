@@ -2,6 +2,7 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 import { contactStyle } from 'styles/layout';
+import { COMPANY_PHONE } from 'globalConstants';
 
 const stylesheet = {
   Phone: {
@@ -10,9 +11,9 @@ const stylesheet = {
 }
 
 const Phone = ({classes}) => 
-  <a href="tel:028 3826 8160" className={classes.Phone}>
+  <a href={`tel:${COMPANY_PHONE}`} className={classes.Phone}>
     <i className="fa fa-phone"></i>
-    <span>028 3826 8160</span>
+    <span>{COMPANY_PHONE}</span>
   </a>;
 
 export default injectSheet(stylesheet)(Phone);

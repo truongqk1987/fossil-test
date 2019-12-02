@@ -2,9 +2,10 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 import { resetSpace, setMaxChildFlexLayout } from 'styles/layout';
+import { HEADER_MENU_ITEMS } from 'globalConstants';
 
 import Menu from './Menu';
-import fakeMenuItems from './fakeMenuItems';
+
 
 const stylesheet = {
     MenuList: {
@@ -15,7 +16,7 @@ const stylesheet = {
 
 const MenuList = ({ classes }) => 
     <ul className={classes.MenuList}>
-        { fakeMenuItems.map(item => <Menu key={item.id} {...item} />
+        { HEADER_MENU_ITEMS.map(item => <Menu key={item.id} {...item} />
             )}
     </ul>
 

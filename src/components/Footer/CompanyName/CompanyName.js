@@ -1,6 +1,8 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
+import { COMPANY_NAME } from 'globalConstants';
+
 const stylesheet = theme => ({
   CompanyName: {
     textAlign: 'center',
@@ -12,7 +14,7 @@ const stylesheet = theme => ({
 const CompanyName = ({classes}) => 
   <div className={classes.CompanyName}>
     <span>&copy;&nbsp;</span>
-    <span>Công Ty TNHH Fossil Việt Nam</span>
+    <span>{COMPANY_NAME}</span>
   </div>;
 
 export default injectSheet(stylesheet)(CompanyName);

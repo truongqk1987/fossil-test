@@ -2,6 +2,7 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 import { contactStyle } from 'styles/layout';
+import { COMPANY_EMAIL } from 'globalConstants';
 
 const stylesheet = {
   Email: {
@@ -10,9 +11,9 @@ const stylesheet = {
 }
 
 const Email = ({classes}) => 
-  <a href="mailTo:phuong@fossil.com" className={classes.Email}>
+  <a href={`mailTo:${COMPANY_EMAIL}`} className={classes.Email}>
     <i className="fa fa-envelope-o"></i>
-    <span>phuong@fossil.com</span>
+    <span>{COMPANY_EMAIL}</span>
   </a>;
 
 export default injectSheet(stylesheet)(Email);
