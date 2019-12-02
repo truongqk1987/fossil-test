@@ -1,11 +1,11 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
+import {flexCenter} from 'styles/layout'
+
 const stylesheet = {
   Title: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    ...flexCenter('column'),
     padding: '1rem',
     '&>div:first-child': {
       padding: '0 0 0.5rem 0',

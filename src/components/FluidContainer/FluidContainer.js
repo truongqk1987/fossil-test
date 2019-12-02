@@ -1,16 +1,16 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-const stylesheet = {
+const stylesheet = theme => ({
     FluidContainer: {
         display: 'flex',
-        minWidth: '80rem',
-        maxWidth: '100rem',
+        maxWidth: theme.containerMaxWidth,
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: props => props.flexColumn ? 'column': 'row',
     }
-}
+});
 
 const FluidContainer = ({ classes, children }) => <div className={classes.FluidContainer}>
     {children}
