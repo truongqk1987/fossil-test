@@ -4,12 +4,15 @@ import injectSheet from 'react-jss';
 import Status from './Status';
 import fakeStatues from './fakeStatues';
 
+const calcMaxWidthOfSidebar = ({ maxWidthSidebarItem}, {containerMaxWidth}) => 
+  `calc(((100% - ${containerMaxWidth})/2) + ${maxWidthSidebarItem})`
+
 const stylesheet = theme => ({
   StatusSidebar: {
     background: theme.pages.order.sidebarBackground,
     display: 'flex',
     justifyContent: 'flex-end',
-    maxWidth: 'calc(((100% - 60rem)/2) + 12rem)',
+    maxWidth: calcMaxWidthOfSidebar(theme.pages.order, theme),
     width: '100%',
     '&>.menuList': {
       maxWidth: theme.pages.order.maxWidthSidebarItem,
