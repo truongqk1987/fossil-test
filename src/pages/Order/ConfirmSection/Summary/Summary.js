@@ -11,9 +11,9 @@ const stylesheet = {
   }
 }
 
-const Summary = ({classes}) => 
+const Summary = ({classes, waitingOrders}) => 
   <div className={classes.Summary}>
-    You have <span className="totalOrders">101</span> orders, waiting for your confirm
+    You have <span className="totalOrders">{waitingOrders}</span> orders, waiting for your confirm
   </div>;
 
 export default injectSheet(stylesheet)(Summary);
