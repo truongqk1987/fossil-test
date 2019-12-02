@@ -34,7 +34,7 @@ export default {
         order: {
             sidebarBackground: colors.white10,
             minWidthSidebar: '20%',
-            minWidthSidebarItem: '50%',
+            maxWidthSidebarItem: '12rem',
             sidebarItemTextColor: colors.black,
             sidebarActiveItemTextColor: colors.white,
             sidebarActiveItemBackground: colors.black10,

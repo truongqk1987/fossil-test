@@ -11,7 +11,8 @@ const stylesheet = theme => ({
     justifyContent: 'flex-end',
     minWidth: theme.pages.order.minWidthSidebar,
     '&>.menuList': {
-      minWidth: theme.pages.order.minWidthSidebarItem,
+      maxWidth: theme.pages.order.maxWidthSidebarItem,
+      width: '100%',
       padding: 0,
       margin: '1rem 0',
     }

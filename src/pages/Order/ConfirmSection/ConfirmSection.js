@@ -10,7 +10,8 @@ import Pagination from './Pagination';
 const stylesheet = theme => ({
   ConfirmSection: {
     padding: '1rem',
-    ...setFlexMaxSize(),
+    maxWidth: '48rem',
+    width: '100%',
     '&>footer': {
       ...setFlex('row', 'center', 'space-between'),
       border: `1px solid ${theme.pages.order.confirmSectionBorder}`,
