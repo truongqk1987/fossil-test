@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
-[https://fossil-test.herokuapp.com/order/] Deployed on Heroku
+[Deployed on Heroku](https://fossil-test.herokuapp.com/order/) 
 
 ## Screenshot
 ![Image of final product](https://github.com/truongqk1987/fossil-test/blob/master/Screenshot.png)
