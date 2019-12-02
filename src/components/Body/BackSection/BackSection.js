@@ -1,5 +1,6 @@
 import React from 'react';
 import injectSheet from 'react-jss';
+import { withRouter } from 'react-router-dom';
 
 import {flexCenter, setFlex} from 'styles/layout'
 
@@ -20,11 +21,11 @@ const stylesheet = theme => ({
   }
 });
 
-const BackSection = ({classes}) => 
+const BackSection = ({classes, history}) => 
   <div className={classes.BackSection}>
       <div className="container">
-      <span><i className="fa fa-angle-left"></i>back</span>
+      <span onClick={history.goBack}><i className="fa fa-angle-left"></i>back</span>
       </div>
   </div>;
 
-export default injectSheet(stylesheet)(BackSection);
+export default injectSheet(stylesheet)(withRouter(BackSection));
