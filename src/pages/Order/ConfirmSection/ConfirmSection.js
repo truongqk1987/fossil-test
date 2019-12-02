@@ -1,7 +1,7 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-import {setFlex, setFlexMaxSize} from 'styles/layout';
+import {setFlex} from 'styles/layout';
 
 import Summary from './Summary';
 import Orders from './Orders';
