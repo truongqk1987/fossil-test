@@ -46,14 +46,15 @@ const ConfirmSection = ({classes, orderList, waitingOrders, totalOrders, dispatc
   }, [])
 
   return (
-    <div className={classes.ConfirmSection}>
-      <Summary waitingOrders={waitingOrders}/>
-      <Orders orderList={orderList}/>
-      <footer>
-        <div>You have: {totalOrders} orders</div>
-        <Pagination />
-      </footer>
-    </div>
+    orderList.length > 0 &&
+      <div className={classes.ConfirmSection}>
+        <Summary waitingOrders={waitingOrders}/>
+        <Orders orderList={orderList}/>
+        <footer>
+          <div>You have: {totalOrders} orders</div>
+          <Pagination />
+        </footer>
+      </div>
   );
 }
 

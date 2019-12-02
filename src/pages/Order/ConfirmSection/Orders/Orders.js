@@ -19,7 +19,7 @@ const header = {
   total: 'Total' 
 };
 
-const Orders = ({classes, orderList}) => orderList.length > 0 &&
+const Orders = ({classes, orderList}) =>
   <div className={classes.Orders}>
     <Table idField="id" header={header} datas={orderList} customizeRenders={{
       customer: renderCustomerField,
