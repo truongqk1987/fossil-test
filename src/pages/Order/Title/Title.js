@@ -1,12 +1,7 @@
 import React from 'react';
 import injectSheet from 'react-jss';
-import {
-  Switch,
-  Route,
-} from "react-router-dom";
 
-import {flexCenter} from 'styles/layout';
-import OrderTitle from 'pages/Order/Title';
+import {flexCenter} from 'styles/layout'
 
 const stylesheet = {
   Title: {
@@ -21,10 +16,9 @@ const stylesheet = {
 }
 
 const Title = ({classes}) => 
-  <Switch>
-    <Route path="/order">
-      <OrderTitle />
-    </Route>
-  </Switch>
+  <div className={classes.Title}>
+    <div>List of order</div>
+    <div>Orders information & payment</div>
+  </div>;
 
 export default injectSheet(stylesheet)(Title);
