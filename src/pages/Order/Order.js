@@ -13,7 +13,7 @@ import StatusSidebar from './StatusSidebar';
 
 const stylesheet = {
   Order: {
-    ...setFlex('row', 'stretch', 'center'),
+    ...setFlex('row', 'stretch', 'flex-start'),
     height: '100%',
   }
 }

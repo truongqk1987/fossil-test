@@ -9,7 +9,8 @@ const stylesheet = theme => ({
     background: theme.pages.order.sidebarBackground,
     display: 'flex',
     justifyContent: 'flex-end',
-    minWidth: theme.pages.order.minWidthSidebar,
+    maxWidth: 'calc(((100% - 60rem)/2) + 12rem)',
+    width: '100%',
     '&>.menuList': {
       maxWidth: theme.pages.order.maxWidthSidebarItem,
       width: '100%',

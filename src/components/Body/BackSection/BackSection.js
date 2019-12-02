@@ -1,22 +1,24 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-const stylesheet = {
+import {flexCenter, setFlex} from 'styles/layout'
+
+const stylesheet = theme => ({
   BackSection: {
     padding: '0.5rem 0',
-    display: 'flex',
+    ...flexCenter(),
     '&>.container': {
-      minWidth: '20%',
-      display: 'flex',
-      justifyContent: 'flex-end',
+      maxWidth: theme.maxWidthOfPageTitle,
+      width: '100%',
+      ...setFlex('column', 'flex-start', 'center' ),
       '&>span': {
-        minWidth: '50%',
         cursor: 'pointer',
+        '&>i': { marginRight: '0.5rem'}
       }
     },
-    '& i': { marginRight: '0.5rem'}
+    
   }
-}
+});
 
 const BackSection = ({classes}) => 
   <div className={classes.BackSection}>
