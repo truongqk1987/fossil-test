@@ -4,6 +4,7 @@ export default {
     flatUIFont: "'Lato', sans-serif",
     containerMaxWidth: '60rem',
     maxWidthOfPageTitle: '60rem',
+    minHeightOfContent: '63rem',
     header: {
         background: colors.black10,
         textColor: colors.white,

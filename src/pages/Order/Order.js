@@ -11,12 +11,13 @@ import { setFlex } from 'styles/layout';
 import ConfirmSection from './ConfirmSection';
 import StatusSidebar from './StatusSidebar';
 
-const stylesheet = {
+const stylesheet = theme => ({
   Order: {
     ...setFlex('row', 'stretch', 'flex-start'),
     height: '100%',
+    minHeight: theme.minHeightOfContent,
   }
-}
+})
 
 const Order = ({classes}) => 
   <div className={classes.Order}>
